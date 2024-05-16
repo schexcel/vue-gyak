@@ -1,0 +1,36 @@
+A feladatot JavaScript programozási nyelvben (vagy JavaScript-re forduló nyelvben) kell megvalósítani, egy frontend keretrendszer segítségével (pl. Vue.js, React, Angular, Qwik). CSS keretrendszer (pl. Bootstrap, Tailwind) használata megengedett.
+
+A feladat teljeskörű elkészítéséhez szükség van az 1. feladatban elkészített backend API végpontokra. Amennyiben valamelyiket nem tudta elkészíteni, indítsa el a mellékelt JSON szervert és azzal dolgozzon a továbbiakban.
+
+A feladat elkészítése során, ahol lehetséges, használjon szemantikus HTML tag-eket, CSS class-ok és id-k helyett!
+	a)	Készítsen projektet DrinkFrontend
+
+	b)	Az alkalmazás (~oldal) betöltésekor a "HomeView" nézetet jelenítse meg, melyhez kérdezze le a „/api/drinks” végpont segítségével az üdítők adatait:
+		a.	Név
+		b.	Ár
+		c.	Akciós
+
+	Az adatok megjelenítésekor az alábbi szempontokat vegye figyelembe:
+		•	Az adatokat egy reszponzív HTML táblázatban jelenítse meg.
+		•	A táblázat 4 oszlopból álljon, amelyből a negyedik tartalmazza a megjelenítés gombot a mintának megfelelően 		(home_page.pdf)
+		•	Az oszlopokat a lekért adatok segítségével töltse ki. Az akciós oszlop esetén a boolean érték alapján "Akciós" vagy "Nem akciós" szöveget jelenítsen meg
+
+	c)	Készítsen navigációs sávot mely a "Kezdőlap" és a "Létrehozás" között SPA rendszerben navigál a weboldal címsorában mindig az aktuális lap neve jelenjen meg.
+
+	d)	Ha a megtekintés gombra kattint a "DrinkDataView" nézet jelenjen meg, melyben egy üdítő összes adatát jelenítse meg a minta szerint. (drink_page.pdf).
+		•	Az összetevők megjelenítéséhez használjon Badge-eket vagy azoknak megfelelő formázást
+		•	Csökkentet ár adat megjelenítésekor, amennyiben nem rendelkezik az ital csökkentett árral a "Nincs" szöveg jelenjen meg, ellenkező esetben a csönketett ár értéke.
+		•	Készítse el a vissza gombot mely a navigációs technológiának megfelelően vissza navigál a "Kezdőlapra".
+
+	f)	Készítsen nézetet "CreateNewDrinkFormView" néven majd másolja be a template részbe a Form.txt tartalmát. Egészítse ki a Formot egy lenyíló listával melybe betölti az ízesítés opciókat a mintának megfelelően.(select_values.png).
+
+	g)	A beviteli mezőket validálja a következők szerint. Az egyes hiba üzenteket magyar nyelven egy alert formájában jelenítse meg a mintának megfelelően. (form_validation.pdf)
+		- "name" kötelező, szöveg, maximum 50 karakter
+		- "description" kötetelező, szöveg, maximum 255 karakter
+		- "quantity" kötelező, egész szám, minimum 1, maximum 100
+		- "price" kötelező, egész szám, minimum 1, maximum 5000,
+		- "discounted_price" kötelező, egész szám, minimum 1, maximum 5000, kisebb mint a "price"
+		- "flavor_id" kötelető, létező "flavors.id"
+		- "ingredients" kötelező
+
+	h)	Készítse el az elküldés függvényt mely elküldi az új üdítőt az adott végpontnak a végpont válaszát jelenítse meg felugró ablakban. Ha sikeres volt az elküldés akkor a „Sikeres küldés! <name> létrehozva” üzenet jelenjen meg a <name> a létrehozott ital neve legyen. Ha sikertelen volt a küldés akkor jelenítse meg a „Sikertelen küldés! <error.message>” üzenetet.
