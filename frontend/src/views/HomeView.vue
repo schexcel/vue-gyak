@@ -29,7 +29,7 @@ onMounted(getData)
 </script>
 
 <template>
-<main>
+<main class="container">
   <h1>Italok</h1>
   <hr>
   <table class="table table-responsive">

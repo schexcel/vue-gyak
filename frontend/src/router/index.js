@@ -7,17 +7,31 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
-    }//,
-    //{
-    //  path: '/about',
-    //  name: 'about',
-    //  // route level code-splitting
-    //  // this generates a separate chunk (About.[hash].js) for this route
-    //  // which is lazy-loaded when the route is visited.
-    //  component: () => import('../views/AboutView.vue')
-    //}
+      component: HomeView,
+      meta:{
+        title: "Kezdőlap"
+      }
+    },
+    {
+     path: '/new',
+     name: 'new',
+     component: () => import('@/views/CreateNewDrinkFormView.vue'),
+      meta:{
+       title: 'Hozzáadás'
+      }
+    },
+    {
+      path: '/drinks/:id',
+      name: 'drink',
+      component: () => import('@/views/DrinkDataView.vue'),
+      meta:{
+        title: 'Adatok'
+      }
+    }
   ]
 })
-
+router.beforeEach((to,from, next)=>{
+  document.title=`${to.meta.title}`;
+  next();
+})
 export default router
