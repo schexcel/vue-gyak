@@ -1,0 +1,15 @@
+Dr. Pepper
+Leírás: Egy különleges gyümölcsös és fűszeres ízvilágú üdítő, melyet sokan imádnak a karakteres íze miatt.
+Hozzávalók: Szénsavas víz, cukor, karamell színezék, foszforsav, természetes és mesterséges ízesítők, koffein.
+
+Coca Cola
+Leírás: Az ikonikus üdítő, mely egyedülálló ízvilágával és frissítő buborékaival világszerte ismert és kedvelt.
+Hozzávalók: Szénsavas víz, cukor vagy kukoricaszirup, foszforsav, karamell színezék, természetes aromák (köztük koffein).
+
+Fanta
+Leírás: Gyümölcsös ízű szénsavas üdítő, mely frissítő és vidám hangulatot áraszt.
+Hozzávalók: Szénsavas víz, cukor vagy kukoricaszirup, természetes és mesterséges ízesítők, citromsav, karamell színezék.
+
+7up
+Leírás: Szénsavas és citrusos ízű üdítő, mely friss és könnyed megoldást nyújt a szomjúságra.
+Hozzávalók: Szénsavas víz, cukor vagy kukoricaszirup, citrom- és limearoma, citromsav.

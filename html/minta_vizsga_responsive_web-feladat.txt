@@ -1,0 +1,21 @@
+Ebben a feladatrészben Italokat bemutató reszponzív viselkedésű weboldalt kell kialakítani a következők szerint.
+1a)	A weboldal karakterkódolása UTF-8, nyelve magyar, a böngésző címsorában megjelenő cím „Italok” legyen!
+2b)	A weboldal fejrészében helyezzen el hivatkozásokat a style.css stíluslapra, valamint a bootstrap állományokra a meglévő hivatkozások után.
+3c)	A weboldal tartalmát helyezze el egy „container-fluid” elemben.
+4d)	Alakítson ki rács nézetet desktop-first rendszer szerint nagy felbontás esetén egy sorba 4 kártya jelenjen meg,
+	tablet esetén 2 kártyát jelenítsen meg a weboldal,
+	végül telefon esetén egy sorban csak egy kártya jelenjen meg. Az egyes oszlopokon legyen két egység felső margó.
+5e)	Alakítson ki kártyákat a mintának megfelelően.
+	Ha a kártyákban szereplő képek nem tudnak betölteni vagy föléjük visszük az egeret a forras.txt állományban lévő ital név jelenjen meg.
+	A kártyák törzsébe az ital leírását helyezze el a mintának megfelelően.
+6f)	Nyissa meg a style.css állományt, majd állítsa be a következők szerint:
+	a.	A háttérszíne az oldalnak legyen #E0FFFF kódolású halvány kék.
+	b.	A kártyák háttérszíne legyen Lime zöld (#32CD32) és betű mérete 20px.
+	c.	Ha a weboldal szélesége 768px és 1200px között van, akkor módosítsa a beállításokat a következő képen: 
+		i.	 A háttérszíne az oldalnak legyen #A4CCCC.
+		ii.	A kártyák hátérszíne legyen #279327 és betű mérete az eredetihez képeset 20%-al nagyobb.
+		iii.	A kártya címének a betűmérete is legyen 20%-al nagyobb.
+	d.	Ha a weboldal szélesége 768px alatt van, akkor módosítsa a beállításokat a következő képen: 
+		i.	 A háttérszíne az oldalnak legyen  #689999.
+		ii.  A kártyák háttérszíne legyen #1A661A és betű mérete az eredetihez képeset 50%-kal nagyobb. 
+		iii. A kártya címének a betűmérete is legyen 50%-kal nagyobb
