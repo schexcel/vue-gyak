@@ -3,6 +3,7 @@
 import {Form as VForm, Field, ErrorMessage, FieldArray} from 'vee-validate';
 import {onMounted, reactive, ref} from 'vue';
 import {http} from '@/utils/http.js'
+import * as yup from 'yup'
 const ingredients = ref(['']);
 const flavors = reactive([]);
 async function getData(){
@@ -29,6 +30,28 @@ async function submitForm(values){
   }
 }
 
+//ide kell a validáció
+const schema = yup.object({
+  name: yup.string().max(50, 'kötelező, szöveg, maximum 50 karakter').required("kötelező, szöveg, maximum 50 karakter"),
+  description: yup.string().max(255, 'maximum 255 karakter').required("kötetelező, szöveg, maximum 255 karakter"),
+  quantity: yup.number().min(1).max(100, 'maximum 255 karakter').required("kötetelező, minimum 1, maximum 100"),
+  price: yup.number().min(1).max(5000, 'maximum 255 karakter').required("kötelező, egész szám, minimum 1, maximum 5000"),
+  discounted_price: yup.number().min(1).max(5000, 'maximum 255 karakter').required("egész szám, minimum 1, maximum 5000, kisebb mint a \"price\""),
+  flavor_id: yup.number().required("kötelető, létező"),
+  ingredients: yup.string().required("Kötelező")
+
+/*    - "name" kötelező, szöveg, maximum 50 karakter
+- "description" kötetelező, szöveg, maximum 255 karakter
+- "quantity" kötelező, egész szám, minimum 1, maximum 100
+- "price" kötelező, egész szám, minimum 1, maximum 5000,
+    - "discounted_price" kötelező, egész szám, minimum 1, maximum 5000, kisebb mint a "price"
+- "flavor_id" kötelető, létező "flavors.id"
+- "ingredients" kötelező
+  */
+
+})
+
+
 //ez egy Callback, ami futtatja a getData függvényt!
 
 onMounted(getData);
@@ -50,7 +73,7 @@ onMounted(getData);
 
 <!-- form txt-be: -->
 
-<VForm  @submit="submitForm">
+<VForm  @submit="submitForm" :validation-schema="schema">
   <div class="input-group">
     <label for="name" class="input-group-text">Név</label>
     <Field type="text" name="name" id="name" class="form-control"/>
